@@ -21,4 +21,4 @@ Explore the cosmic conflict between Imperium Noctis and Imperium Lumen.
 ### Website
 ```bash
 # Just open index.html in browser
-open index.html
+open eclipseofwill.html

@@ -1,0 +1,61 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap');
+
+/* Японские шрифты для японской версии */
+html[lang="ja"] body {
+    font-family: 'Noto Serif JP', 'Hiragino Mincho Pro', 'MS Mincho', serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+}
+
+/* Заголовки остаются Cinzel даже в японской версии */
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] .section-title,
+html[lang="ja"] .ability-title,
+html[lang="ja"] .principle-name,
+html[lang="ja"] .royalfamily-name {
+    font-family: 'Cinzel', 'Noto Serif JP', serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* Основной шрифт для английской версии */
+body:not([lang="ja"]) {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* TOC японский */
+html[lang="ja"] .toc-link {
+    font-family: 'Noto Serif JP', 'Hiragino Mincho Pro', serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Мотто/цитаты японские */
+html[lang="ja"] .motto,
+html[lang="ja"] .quote {
+    font-family: 'Noto Serif JP', 'Cinzel', serif;
+    font-style: normal;
+    letter-spacing: 0.03em;
+}
+
+/* Статистика и метки */
+html[lang="ja"] .stat-value,
+html[lang="ja"] .stat-label,
+html[lang="ja"] .highlight {
+    font-family: 'Cinzel', 'Noto Serif JP', serif;
+}
+
+/* Кнопки */
+html[lang="ja"] .back-button,
+html[lang="ja"] .toc-toggle,
+html[lang="ja"] .toc-show-btn {
+    font-family: 'Cinzel', 'Noto Serif JP', serif;
+}

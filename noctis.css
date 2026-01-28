@@ -1,0 +1,845 @@
+.card-link {
+    text-decoration: none !important;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+}
+
+.card-link:link,
+.card-link:visited,
+.card-link:hover,
+.card-link:active {
+    text-decoration: none;
+}
+
+
+body {
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(-45deg, #000000, #1a0b2e, #764ba2, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.header h1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+    transition: all 0.3s ease;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #ffffff, #9370DB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(118, 75, 162, 0.5);
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.motto {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #9370DB;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.motto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+    transition: all 0.3s ease;
+}
+
+.content-section {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #764ba2;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(118, 75, 162, 0.3);
+    transition: all 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+    transition: all 0.3s ease;
+}
+
+.section-title {
+    color: #9370DB;
+    border-bottom: 2px solid #764ba2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.section-title:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+    transition: all 0.3s ease;
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+
+
+.stat-card {
+    background: rgba(118, 75, 162, 0.2);
+    border: 1px solid #764ba2;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+    transition: all 0.3s ease;
+}
+
+.stat-value {
+    font-size: 2rem;
+    color: #9370DB;
+    font-weight: bold;
+}
+
+.stat-label {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.royalfamily-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.royalfamily-card {
+    background: rgba(118, 75, 162, 0.15);
+    border: 1px solid #764ba2;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.royalfamily-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+    transition: all 0.3s ease;
+    transform: perspective(1000px) rotateY(5deg) rotateX(5deg) translateZ(20px);
+}
+
+.royalfamily-name {
+    color: #9370DB;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #764ba2;
+    padding-bottom: 8px;
+}
+
+.ability-section {
+    background: rgba(26, 26, 46, 0.9);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 4px solid #9370DB;
+    transition: all 0.3s ease;
+}
+
+.ability-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+    transition: all 0.3s ease;
+}
+
+.ability-title {
+    color: #9370DB;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.principle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.principle-card {
+    background: rgba(118, 75, 162, 0.15);
+    border: 1px solid #764ba2;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+}
+
+.principle-name {
+    color: #9370DB;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #764ba2;
+    padding-bottom: 8px;
+}
+
+.back-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #764ba2, #000000);
+    color: white;
+    padding: 12px 30px;
+    border: 1px solid #764ba2;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    position: relative;
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.back-button:hover::before {
+    left: 100%;
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #9370DB, #764ba2);
+    box-shadow: 0 0 15px #764ba2;
+    transform: translateY(-2px);
+}
+
+.quote {
+    font-style: italic;
+    color: #9370DB;
+    border-left: 3px solid #764ba2;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    color: #9370DB;
+    font-weight: bold;
+}
+
+
+a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageExit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+
+
+
+
+
+/* === FIXED TOC - CORRECTED POSITION === */
+
+/* Обертка для всего TOC - ФИКСИРОВАНА В ПРАВОМ ВЕРХНЕМ УГЛУ */
+.toc-wrapper {
+    position: fixed;
+    top: 120px; /* Ниже заголовка */
+    right: 30px;
+    z-index: 9999; /* Очень высокий z-index */
+    transition: all 0.3s ease;
+}
+
+/* Основной блок TOC */
+.page-toc {
+    background: rgba(10, 5, 30, 0.95);
+    border: 2px solid #764ba2;
+    border-radius: 12px;
+    padding: 20px;
+    width: 240px;
+    backdrop-filter: blur(15px);
+    box-shadow: 
+        0 0 40px rgba(118, 75, 162, 0.6),
+        inset 0 0 20px rgba(147, 112, 219, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Эффект свечения вокруг TOC */
+.page-toc::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #764ba2, #9370DB, #4B0082, #764ba2);
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0.5;
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+}
+
+/* Заголовок TOC с кнопкой */
+.toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #9370DB;
+}
+
+.toc-header h3 {
+    color: #9370DB;
+    margin: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+}
+
+/* Кнопка скрытия TOC */
+.toc-toggle {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #9370DB;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #9370DB;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.toc-toggle:hover {
+    background: rgba(147, 112, 219, 0.3);
+    transform: rotate(180deg);
+    color: white;
+    box-shadow: 0 0 15px #9370DB;
+}
+
+/* Кнопка показа скрытого TOC */
+.toc-show-btn {
+    position: fixed;
+    top: 120px;
+    right: 30px;
+    background: rgba(10, 5, 30, 0.95);
+    border: 2px solid #764ba2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #9370DB;
+    transition: all 0.3s ease;
+    padding: 0;
+    z-index: 9998;
+    box-shadow: 0 0 25px rgba(118, 75, 162, 0.8);
+}
+
+.toc-show-btn:hover {
+    background: rgba(147, 112, 219, 0.3);
+    transform: scale(1.1);
+    color: white;
+    box-shadow: 0 0 30px #9370DB;
+}
+
+/* Иконки */
+.toc-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Стили для ссылок TOC */
+.page-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.page-toc ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.page-toc ul::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.page-toc ul::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #764ba2, #9370DB);
+    border-radius: 3px;
+}
+
+.page-toc li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.page-toc li::before {
+    content: '⯈';
+    position: absolute;
+    left: 0;
+    color: #9370DB;
+    font-size: 0.9rem;
+    top: 0;
+    opacity: 0.7;
+}
+
+.toc-link {
+    color: #E6E6FA;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 6px 0;
+    border-bottom: 1px solid transparent;
+    font-family: 'Cinzel', serif;
+}
+
+.toc-link:hover {
+    color: white;
+    padding-left: 8px;
+    border-bottom: 1px solid #9370DB;
+    text-shadow: 0 0 8px rgba(147, 112, 219, 0.8);
+    transform: translateX(3px);
+}
+
+.toc-link.active {
+    color: white;
+    font-weight: bold;
+    border-left: 3px solid #9370DB;
+    padding-left: 20px;
+    background: linear-gradient(90deg, 
+        rgba(118, 75, 162, 0.1), 
+        transparent);
+    text-shadow: 0 0 10px rgba(147, 112, 219, 0.9);
+}
+
+/* Состояния */
+.page-toc.hidden {
+    transform: translateX(120%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toc-wrapper.hidden .toc-show-btn {
+    display: flex;
+    animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInRight {
+    from { 
+        transform: translateX(50px) scale(0.8); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateX(0) scale(1); 
+        opacity: 1; 
+    }
+}
+
+.toc-wrapper:not(.hidden) .toc-show-btn {
+    display: none;
+}
+
+/* Сдвигаем основной контент, чтобы не перекрывался */
+.container {
+    transition: padding-right 0.3s ease;
+    padding-right: 300px; /* Больше места для TOC */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px; /* Симметричные отступы */
+    padding-top: 40px;
+}
+
+.container.toc-hidden {
+    padding-right: 40px;
+}
+
+/* Адаптивность */
+@media (max-width: 1400px) {
+    .toc-wrapper {
+        right: 20px;
+        top: 100px;
+    }
+    .toc-show-btn {
+        right: 20px;
+        top: 100px;
+    }
+    .container {
+        padding-right: 280px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .toc-wrapper {
+        right: 15px;
+    }
+    .page-toc {
+        width: 220px;
+        padding: 15px;
+    }
+    .container {
+        padding-right: 260px;
+    }
+}
+
+@media (max-width: 992px) {
+    .toc-wrapper {
+        top: 90px;
+        right: 10px;
+    }
+    .toc-show-btn {
+        top: 90px;
+        right: 10px;
+    }
+    .page-toc {
+        width: 200px;
+        padding: 12px;
+    }
+    .toc-header h3 {
+        font-size: 1rem;
+    }
+    .container {
+        padding-right: 240px;
+    }
+}
+
+/* На мобильных скрываем TOC */
+@media (max-width: 768px) {
+    .toc-wrapper {
+        display: none !important;
+    }
+    .toc-show-btn {
+        display: none !important;
+    }
+    .container {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+}
+
+/* Для очень высоких экранов */
+@media (min-height: 1000px) {
+    .toc-wrapper {
+        top: 150px;
+    }
+    .toc-show-btn {
+        top: 150px;
+    }
+}
+
+
+
+/* === TOC STATES & VISIBILITY === */
+
+/* Основные классы для управления видимостью */
+.page-toc.hidden {
+    display: none !important;
+}
+
+.toc-show-btn.hidden {
+    display: none !important;
+}
+
+/* Показываем кнопку "показать TOC" только когда TOC скрыт */
+.toc-wrapper:not(.hidden) .toc-show-btn {
+    display: none !important;
+}
+
+.toc-wrapper.hidden .toc-show-btn {
+    display: flex !important;
+}
+
+/* Показываем TOC по умолчанию на десктопе */
+@media (min-width: 769px) {
+    .page-toc:not(.hidden) {
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* На мобильных TOC изначально скрыт под кнопкой */
+@media (max-width: 768px) {
+    .toc-wrapper {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    
+    .page-toc {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        width: 280px;
+        max-width: 90vw;
+        max-height: 70vh;
+        overflow-y: auto;
+        display: none;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+    }
+    
+    .page-toc:not(.hidden) {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        animation: mobileTOCSlideIn 0.3s ease;
+    }
+    
+    .toc-show-btn {
+        display: flex !important;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+    
+    .container {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+}
+
+@keyframes mobileTOCSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === DEBUG STYLES - можно удалить после отладки === */
+.debug-toc {
+    border: 2px solid red !important;
+}
+
+.debug-toc * {
+    border: 1px solid blue !important;
+}
+
+/* === TOC ACTIVE STATE ENHANCEMENTS === */
+.toc-link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toc-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #9370DB, #764ba2);
+    transition: width 0.3s ease;
+}
+
+.toc-link:hover::after {
+    width: 100%;
+}
+
+/* Активная ссылка в TOC */
+.toc-link.active {
+    background: linear-gradient(90deg, 
+        rgba(118, 75, 162, 0.15), 
+        transparent 80%);
+    border-left: 3px solid #9370DB;
+    padding-left: 20px;
+    margin-left: -15px;
+    color: white;
+    text-shadow: 0 0 10px rgba(147, 112, 219, 0.8);
+    box-shadow: inset 0 0 20px rgba(118, 75, 162, 0.1);
+}
+
+/* === IMPROVED SCROLLBAR === */
+.page-toc ul {
+    scrollbar-width: thin;
+    scrollbar-color: #764ba2 rgba(255, 255, 255, 0.05);
+}
+
+.page-toc ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.page-toc ul::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.page-toc ul::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #764ba2, #9370DB);
+    border-radius: 4px;
+    border: 2px solid rgba(10, 5, 30, 0.95);
+}
+
+.page-toc ul::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #9370DB, #4B0082);
+}
+
+/* === SMOOTH TRANSITIONS === */
+.page-toc,
+.toc-show-btn,
+.toc-toggle {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === RESPONSIVE TYPOGRAPHY FOR JAPANESE === */
+html[lang="ja"] .toc-link {
+    font-family: 'Noto Serif JP', 'Hiragino Mincho Pro', serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+}
+
+html[lang="ja"] .toc-header h3 {
+    font-family: 'Cinzel', 'Noto Serif JP', serif;
+    letter-spacing: 3px;
+}
+
+/* === PRINT STYLES === */
+@media print {
+    .toc-wrapper,
+    .toc-show-btn,
+    .toc-toggle {
+        display: none !important;
+    }
+    
+    .container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+}
+
+/* === HIGH CONTRAST MODE SUPPORT === */
+@media (prefers-contrast: high) {
+    .page-toc {
+        border: 3px solid #764ba2;
+        background: rgba(0, 0, 0, 0.95);
+    }
+    
+    .toc-link {
+        color: white;
+    }
+    
+    .toc-link:hover {
+        color: #FFD700;
+    }
+}
+
+/* === REDUCED MOTION SUPPORT === */
+@media (prefers-reduced-motion: reduce) {
+    .page-toc,
+    .toc-show-btn,
+    .toc-toggle,
+    .toc-link,
+    .container {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    .page-toc.hidden {
+        display: none !important;
+    }
+}

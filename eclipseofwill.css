@@ -1,0 +1,411 @@
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+body {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, yellow, #764ba2, #000000);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* ===== АНИМАЦИИ ФОНА ===== */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== КОНТЕЙНЕРЫ ===== */
+.container {
+    display: flex;
+    gap: 0;
+    min-height: 60vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    width: 100%; /* Добавить это */
+}
+
+.container-half {
+    flex: 1; /* Убедиться что оба занимают равное пространство */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(26, 26, 46, 0.8);
+    width: 50%; /* Добавить фиксированную ширину */
+    min-width: 0; /* Важно для flexbox */
+}
+
+/* Убрать отдельные границы для left/right и сделать их одинаковыми */
+.container-left, 
+.container-right {
+    background: rgba(26, 26, 46, 0.8);
+    transition: all 0.3s ease;
+    border: none; /* Убрать границы */
+}
+
+.container-left {
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Легкая разделительная линия */
+}
+
+.container-right {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== КАРТОЧКИ ИМПЕРИЙ ===== */
+.empire-card {
+    color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 40px 25px; /* УВЕЛИЧИЛИ ВЕРТИКАЛЬНЫЕ ОТСТУПЫ */
+    transition: all 0.3s ease;
+    max-width: 400px;
+    width: 100%;
+    animation: cardAppear 0.8s ease-out;
+    margin: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 650px; /* ЗНАЧИТЕЛЬНО УДЛИНИЛИ КАРТОЧКИ */
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1; /* Добавить это */
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Исправить hover эффекты для контейнеров */
+.container-left:hover {
+    box-shadow: inset 0 0 20px rgba(118, 75, 162, 0.3), 
+                0 0 10px rgba(118, 75, 162, 0.5);
+}
+
+.container-right:hover {
+    box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.2), 
+                0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .container-half {
+        width: 100%; /* На мобильных 100% ширины */
+        border: none;
+        border-bottom: 2px solid #764ba2;
+        padding: 40px 20px; /* Увеличили вертикальные отступы */
+        min-height: 80vh; /* Высокие на мобильных */
+    }
+    
+    .container-left {
+        border-right: none;
+    }
+    
+    .container-right {
+        border-left: none;
+        border-bottom: none; /* Убрать нижнюю границу у последнего */
+    }
+    
+    .empire-card {
+        min-height: 600px; /* Сохраняем высоту на мобильных */
+        padding: 35px 20px;
+        max-width: 100%; /* На мобильных можно использовать всю ширину */
+    }
+}
+
+/* Для очень широких экранов */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .empire-card {
+        max-width: 500px; /* Увеличить максимальную ширину карточек */
+        min-height: 700px; /* Еще выше на широких экранах */
+    }
+}
+
+/* ===== IMPERIUM NOCTIS ===== */
+.empire-card--noctis {
+    border-image: linear-gradient(135deg, #00008B, #764ba2, #4B0082, #8A2BE2) 1;
+    background: linear-gradient(135deg, rgba(0, 0, 30, 0.9), rgba(75, 0, 130, 0.8));
+}
+
+.empire-card--noctis:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 0 25px #4B0082,
+        0 0 50px #8A2BE2,
+        0 0 75px rgba(118, 75, 162, 0.8),
+        inset 0 0 30px rgba(75, 0, 130, 0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.empire-card--noctis::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00008B, #8A2BE2, #4B0082, #9370DB);
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: pulseNoctis 2s ease-in-out infinite;
+}
+
+.empire-card--noctis:hover::before {
+    opacity: 1;
+}
+
+@keyframes pulseNoctis {
+    0%, 100% { filter: blur(5px); opacity: 0.7; }
+    50% { filter: blur(8px); opacity: 1; }
+}
+
+/* ===== IMPERIUM LUMEN ===== */
+.empire-card--lumen {
+    border-image: linear-gradient(135deg, #FFD700, #FFFFFF, #FFA500) 1;
+    background: linear-gradient(135deg, rgba(30, 30, 60, 0.9), rgba(255, 215, 0, 0.3));
+}
+
+.empire-card--lumen:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 0 25px #FFD700,
+        0 0 50px #FFA500,
+        0 0 75px rgba(255, 255, 255, 0.8),
+        inset 0 0 30px rgba(255, 215, 0, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.empire-card--lumen::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #FFD700, #FFFFFF, #FFA500, #FFD700);
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.empire-card--lumen:hover::before {
+    opacity: 1;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { filter: blur(5px); opacity: 0.7; }
+    50% { filter: blur(8px); opacity: 1; }
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, white 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    color: transparent;
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(118, 75, 162, 0.6);
+    transform: scale(1.05);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 30px 0;
+    background: linear-gradient(135deg, #FFFFFF, #9370DB, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding-bottom: 15px;
+    transition: all 0.4s ease;
+    animation: titlePulse 3s ease-in-out infinite;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #9370DB, #FFD700, #9370DB, transparent);
+    border-radius: 2px;
+    animation: lineGlow 2s ease-in-out infinite;
+}
+
+h2:hover {
+    transform: scale(1.05);
+    text-shadow: 
+        0 0 25px rgba(255, 255, 255, 0.6),
+        0 0 35px rgba(147, 112, 219, 0.4),
+        0 0 45px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes titlePulse {
+    0%, 100% { transform: scale(1); text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+    50% { transform: scale(1.02); text-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(147, 112, 219, 0.3); }
+}
+
+@keyframes lineGlow {
+    0%, 100% { width: 200px; opacity: 0.7; box-shadow: 0 0 10px #9370DB; }
+    50% { width: 250px; opacity: 1; box-shadow: 0 0 20px #FFD700, 0 0 30px rgba(147, 112, 219, 0.5); }
+}
+
+/* ===== ИКОНКИ ===== */
+.empire-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px currentColor);
+    transition: all 0.4s ease;
+}
+
+.empire-card--noctis:hover .empire-icon {
+    filter: drop-shadow(0 0 15px #8A2BE2) drop-shadow(0 0 25px #4B0082) drop-shadow(0 0 35px #00008B);
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.empire-card--lumen:hover .empire-icon {
+    filter: drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500) drop-shadow(0 0 35px #FFFFFF);
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ===== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА ===== */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid #764ba2;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+    background: rgba(118, 75, 162, 0.7);
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    background: #764ba2;
+    box-shadow: 0 0 10px #764ba2;
+}
+
+/* ===== ЯПОНСКАЯ ВЕРСИЯ (IMPERIAL ROYAL) ===== */
+html[lang="ja"] body,
+body.ja-lang {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 2;
+}
+
+/* Имперские заголовки */
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+body.ja-lang h1,
+body.ja-lang h2,
+body.ja-lang h3 {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: none;
+}
+
+/* Главный титул */
+html[lang="ja"] header h1,
+body.ja-lang header h1 {
+    font-size: 3.6rem;
+    letter-spacing: 0.28em;
+    text-shadow:
+        0 0 12px rgba(255,255,255,0.45),
+        0 0 24px rgba(147,112,219,0.45);
+}
+
+/* Названия империй */
+html[lang="ja"] .empire-card h2,
+body.ja-lang .empire-card h2 {
+    font-size: 2.2rem;
+    letter-spacing: 0.22em;
+}
+
+/* Основной текст карточек */
+html[lang="ja"] .empire-card p,
+body.ja-lang .empire-card p {
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+}
+
+/* Кнопка 日本語 */
+html[lang="ja"] .lang-btn[data-lang="ja"],
+body.ja-lang .lang-btn[data-lang="ja"] {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 700;
+}
+
+/* EN остаётся западным */
+html[lang="ja"] .lang-btn[data-lang="en"],
+body.ja-lang .lang-btn[data-lang="en"] {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose your empire in Eclipse of Will - Imperium Noctis or Imperium Lumen. Strategic fantasy world with unique abilities and philosophies.">
+    <title>Eclipse of Will - Empire Profile</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Shippori+Mincho+B1:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="eclipseofwill.css">
+</head>
+<body>
+    <main id="main-content">
+        <header>
+            <h1>ECLIPSE OF WILL</h1>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+                <button class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+            </div>
+        </header>
+
+        <h2 class="page-subtitle">Select Empire</h2>
+
+        <div class="container">
+            <div class="container-half container-left">
+                <a href="noctis.html" class="card-link" 
+                   data-en-link="noctis.html" 
+                   data-ja-link="noctis-ja.html"
+                   data-en-title="Learn more about Imperium Noctis"
+                   data-ja-title="ノクティス帝国について詳しく見る">
+                    <section class="empire-card empire-card--noctis" aria-labelledby="noctis-title">
+                        <div class="empire-icon" role="img" aria-label="Moon symbol">🌙</div>
+                        <h2 id="noctis-title">IMPERIUM NOCTIS</h2>
+                        <p><strong>Ruler: </strong>Queen Amilla & King Rein</p>
+                        <p><strong>Heir: </strong>Freia Noctis</p>
+                        <p><strong>Domain: </strong>Realm of Shadows</p>
+                        <p><strong>Philosophy: </strong>Power through Sacrifice</p>
+                        <p><strong>Signature Abilities: </strong>Eidolon Evolution</p>
+                        <p>A totalitarian empire built upon the deification of strength.
+          In Imperium Noctis, weakness is not a flaw but a crime against reality itself.
+          Power is forged through suffering, discipline, and irreversible sacrifice,
+          enforced by law, faith, and engineered evolution.</p>
+                    </section>
+                </a>
+            </div>
+
+            <div class="container-half container-right">
+                <a href="lumen.html" class="card-link" 
+                   data-en-link="lumen.html" 
+                   data-ja-link="lumen-ja.html"
+                   data-en-title="Learn more about Imperium Lumen"
+                   data-ja-title="ルーメン帝国について詳しく見る">
+                    <section class="empire-card empire-card--lumen" aria-labelledby="lumen-title">
+                        <div class="empire-icon" role="img" aria-label="Sun symbol">☀️</div>
+                        <h2 id="lumen-title">IMPERIUM LUMEN</h2>
+                        <p><strong>Leader: </strong>The Enlightened Council</p>
+                        <p><strong>Domain: </strong>Realm of Eternal Dawn</p>
+                        <p><strong>Philosophy: </strong>Power through Enlightenment</p>
+                        <p><strong>Signature Abilities: </strong>Absolute Enlightenment, Lumen Arts</p>
+                        <p>The empire of boundless light, where true power comes from inner peace and spiritual awakening.</p>
+                    </section>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <script src="eclipseofwill.js"></script>
+</body>
+</html>

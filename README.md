@@ -1,17 +1,40 @@
 # Eclipse of Will - Fantasy Universe
 
-A complete fantasy universe project featuring a responsive website and Go backend APIs.  
-Explore the cosmic conflict between Imperium Noctis and Imperium Lumen.
+ **Work in Progress** 
+My personal fantasy world project — currently under development.
 
-## What's Inside
+##  The Story So Far
+This is the beginning of a larger universe. Right now you'll find:
+- Basic website structure with two empires
+- Go backend APIs in early stages
+- Foundation for future expansion
 
-### Frontend Website
-- **Homepage** - Choose between two empires
-- **Imperium Noctis** - Realm of Shadows, Power through Sacrifice  
-- **Imperium Lumen** - Realm of Eternal Dawn, Power through Enlightenment
-- **Responsive Design** - Works on all devices
-- **Multilingual** - English/Japanese support
+## Current Status
+  **Done:**
+- Website homepage with empire selection
+- Basic Go APIs for anime and characters
+- Project structure setup
 
-### Backend APIs (Go)
-1. **Anime API** - REST API for anime database
-2. **Character API** - REST API for Eclipse of Will characters with battle simulation
+  **In Progress:**
+- More pages for each empire
+- Character battle system improvements
+- Database integration
+
+  **Planned:**
+- Full storyline implementation
+- User authentication
+- Interactive maps
+- Mobile app version
+
+## Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** Go (Golang)
+- **Tools:** Git, GitHub
+
+## Philosophy
+This project grows organically — I build features as I learn new technologies.  
+It's not perfect, but it's real and evolving.
+
+## For Visitors
+Feel free to explore the code, suggest ideas, or fork your own version.  
+Every great universe starts with a single line of code.

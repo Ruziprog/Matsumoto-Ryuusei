@@ -15,14 +15,3 @@ Explore the cosmic conflict between Imperium Noctis and Imperium Lumen.
 ### Backend APIs (Go)
 1. **Anime API** - REST API for anime database
 2. **Character API** - REST API for Eclipse of Will characters with battle simulation
-
-## Quick Start
-
-### Website
-```bash
-## Quick Start
-
-### Website
-Open `eclipseofwill.html` in your browser.
-# Или:
-Just double-click `eclipseofwill.html`
